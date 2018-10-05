@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string.h>
 #include <stdio.h>
+#include <algorithm>
 using namespace std;
 void maquinadivi(string fita){
     int estado = -1, pos = 0;
@@ -226,8 +227,18 @@ void maquinadivi(string fita){
      cout<<fita<<endl; 
      getchar();
     }
+    int p=0;
+    for(int i=0; i< fita.size();i++){
+        if(fita[i]=='>'){
+            break;
+        }
+        p++;
+    }
+    fita.erase (fita.begin(), fita.begin()+p);
     cout<<"Fim"<<endl;
+    cout<<fita<<endl;
     getchar();
+    return;
 }
 
 /*-----------------------------------------------------------------------------------------------------*/

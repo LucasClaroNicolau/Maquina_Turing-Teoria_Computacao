@@ -1,5 +1,6 @@
 #include <iostream>
 #include <stdio.h>
+#include <algorithm>
 using namespace std;
 void maquinasoma(string fita){
     int estado = -1, pos = 0;
@@ -45,8 +46,11 @@ void maquinasoma(string fita){
      cout<<fita<<endl; 
      getchar();
     }
+    fita.erase (std::remove(fita.begin(), fita.end(), '_'), fita.end());
     cout<<"Fim"<<endl;
+    cout<<fita<<endl;
     getchar();
+    return;
 }
 
 /*-----------------------------------------------------------------------------------------------------*/
