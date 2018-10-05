@@ -5,6 +5,8 @@ using namespace std;
 void maquinasub(string fita){
     int estado = -1, pos = 0;
     while(estado != 8){
+        cout<<pos;
+        cout<<estado;
         if(estado == -1){
             pos++;
             estado++;
@@ -68,10 +70,14 @@ void maquinasub(string fita){
             if(fita[pos] == '*'){
                 pos--;
             }
-            else{
+            else if(fita[pos] == '_'){
                 estado = 7;
                 fita[pos] = '>';
                 pos--;
+            }
+            else{
+                estado = 8;
+                pos++;
             }
         }
         else if(estado == 7){
