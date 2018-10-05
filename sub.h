@@ -5,7 +5,7 @@ using namespace std;
 void maquinasub(string fita){
     int estado = -1, pos = 0;
     while(estado != 8){
-        if(estado == -1){
+       if(estado == -1){
             pos++;
             estado++;
             
