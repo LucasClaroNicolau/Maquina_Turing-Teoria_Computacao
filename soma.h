@@ -5,6 +5,8 @@ using namespace std;
 void maquinasoma(string fita){
     int estado = -1, pos = 0;
     while(estado != 3){
+        cout<<estado<<endl;
+        cout<<pos<<endl;
         if(estado == -1){
             pos++;
             estado++;
